@@ -1,0 +1,20 @@
+{
+	"name": "DestinationDataset_7y3",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "adsstoragedatalake",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "Daily/parquet",
+				"container": "staging"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
