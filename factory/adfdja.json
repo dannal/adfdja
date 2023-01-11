@@ -1,0 +1,9 @@
+{
+	"name": "adfdja",
+	"location": "australiasoutheast",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "6ca59d1b-2a80-47a0-82a1-d85d4d0d51b3",
+		"tenantId": "16b3c013-d300-468d-ac64-7eda0820b6d3"
+	}
+}
