@@ -5,8 +5,8 @@
 		"annotations": [],
 		"type": "AzureBlobFS",
 		"typeProperties": {
-			"url": "https://djastdstg.dfs.core.windows.net/",
-			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDUyQzM2Nzg3LTU0MjAtNDI4Ni04N0I4LTY0NzFFOEE3ODhGN18yMTNkZWFmOC1lYjRjLTQ5YjQtYTQ1My03YjZkZTg5OTAwZmEiDQp9"
+			"url": "https://testdatalakestgdja.dfs.core.windows.net/",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDUyQzM2Nzg3LTU0MjAtNDI4Ni04N0I4LTY0NzFFOEE3ODhGN19lZjc0MTBhYS0xMDdkLTRlMGEtODczZi05MWY2MTVhMTJmMTMiDQp9"
 		},
 		"connectVia": {
 			"referenceName": "AutoResolveIntegrationRuntime",
