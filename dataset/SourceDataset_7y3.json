@@ -1,0 +1,71 @@
+{
+	"name": "SourceDataset_7y3",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "adsstoragedatalake",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "Daily",
+				"container": "globaldata"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"date": {
+					"type": "string"
+				},
+				"total_cases": {
+					"type": "integer"
+				},
+				"new_cases": {
+					"type": "integer"
+				},
+				"total_deaths": {
+					"type": "integer"
+				},
+				"new_deaths": {
+					"type": "integer"
+				},
+				"total_cases_per_million": {
+					"type": "number"
+				},
+				"new_cases_per_million": {
+					"type": "number"
+				},
+				"total_deaths_per_million": {
+					"type": "integer"
+				},
+				"new_deaths_per_million": {
+					"type": "integer"
+				},
+				"stringency_index": {
+					"type": "number"
+				},
+				"new_cases_smoothed": {
+					"type": "number"
+				},
+				"new_deaths_smoothed": {
+					"type": "integer"
+				},
+				"new_cases_smoothed_per_million": {
+					"type": "number"
+				},
+				"new_deaths_smoothed_per_million": {
+					"type": "integer"
+				},
+				"Code": {
+					"type": "string"
+				},
+				"Country": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}

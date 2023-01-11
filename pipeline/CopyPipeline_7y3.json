@@ -1,0 +1,200 @@
+{
+	"name": "CopyPipeline_7y3",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_7y3",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "globaldata/Daily/"
+					},
+					{
+						"name": "Destination",
+						"value": "staging/Daily/parquet/"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "JsonSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"wildcardFileName": "*",
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "JsonReadSettings"
+						}
+					},
+					"sink": {
+						"type": "ParquetSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings"
+						},
+						"formatSettings": {
+							"type": "ParquetWriteSettings"
+						}
+					},
+					"enableStaging": false,
+					"validateDataConsistency": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "$['date']"
+								},
+								"sink": {
+									"name": "date"
+								}
+							},
+							{
+								"source": {
+									"path": "$['total_cases']"
+								},
+								"sink": {
+									"name": "total_cases"
+								}
+							},
+							{
+								"source": {
+									"path": "$['new_cases']"
+								},
+								"sink": {
+									"name": "new_cases"
+								}
+							},
+							{
+								"source": {
+									"path": "$['total_deaths']"
+								},
+								"sink": {
+									"name": "total_deaths"
+								}
+							},
+							{
+								"source": {
+									"path": "$['new_deaths']"
+								},
+								"sink": {
+									"name": "new_deaths"
+								}
+							},
+							{
+								"source": {
+									"path": "$['total_cases_per_million']"
+								},
+								"sink": {
+									"name": "total_cases_per_million"
+								}
+							},
+							{
+								"source": {
+									"path": "$['new_cases_per_million']"
+								},
+								"sink": {
+									"name": "new_cases_per_million"
+								}
+							},
+							{
+								"source": {
+									"path": "$['total_deaths_per_million']"
+								},
+								"sink": {
+									"name": "total_deaths_per_million"
+								}
+							},
+							{
+								"source": {
+									"path": "$['new_deaths_per_million']"
+								},
+								"sink": {
+									"name": "new_deaths_per_million"
+								}
+							},
+							{
+								"source": {
+									"path": "$['stringency_index']"
+								},
+								"sink": {
+									"name": "stringency_index"
+								}
+							},
+							{
+								"source": {
+									"path": "$['new_cases_smoothed']"
+								},
+								"sink": {
+									"name": "new_cases_smoothed"
+								}
+							},
+							{
+								"source": {
+									"path": "$['new_deaths_smoothed']"
+								},
+								"sink": {
+									"name": "new_deaths_smoothed"
+								}
+							},
+							{
+								"source": {
+									"path": "$['new_cases_smoothed_per_million']"
+								},
+								"sink": {
+									"name": "new_cases_smoothed_per_million"
+								}
+							},
+							{
+								"source": {
+									"path": "$['new_deaths_smoothed_per_million']"
+								},
+								"sink": {
+									"name": "new_deaths_smoothed_per_million"
+								}
+							},
+							{
+								"source": {
+									"path": "$['Code']"
+								},
+								"sink": {
+									"name": "Code"
+								}
+							},
+							{
+								"source": {
+									"path": "$['Country']"
+								},
+								"sink": {
+									"name": "Country"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_7y3",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_7y3",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}
